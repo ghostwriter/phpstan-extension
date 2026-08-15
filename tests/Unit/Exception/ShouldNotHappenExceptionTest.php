@@ -4,28 +4,48 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Exception;
 
-use Ghostwriter\Wip\Exception\ShouldNotHappenException;
-use Ghostwriter\Wip\Interface\ExceptionInterface;
+use Exception;
+use Ghostwriter\PHPStanExtension\Exception\ShouldNotHappenException;
+use Ghostwriter\PHPStanExtension\Interface\PHPStanExtensionExceptionInterface;
+use Ghostwriter\PHPUnitAssertions\Trait\AssertionsTrait;
 use LogicException;
 use PHPUnit\Framework\Attributes\CoversClass;
+use Stringable;
 use Tests\Unit\AbstractTestCase;
 use Throwable;
-
-use function is_a;
 
 #[CoversClass(ShouldNotHappenException::class)]
 final class ShouldNotHappenExceptionTest extends AbstractTestCase
 {
+    use AssertionsTrait;
+
     /** @throws Throwable */
-    public function testExtendsLogicException(): void
+    public function testExtendsException(): void
     {
-        self::assertTrue(is_a(ShouldNotHappenException::class, LogicException::class, true));
-        self::assertTrue(is_a(ShouldNotHappenException::class, Throwable::class, true));
+        self::assertClassExtendsClass(ShouldNotHappenException::class, Exception::class);
     }
 
     /** @throws Throwable */
-    public function testImplementsExceptionInterface(): void
+    public function testExtendsLogicException(): void
     {
-        self::assertTrue(is_a(ShouldNotHappenException::class, ExceptionInterface::class, true));
+        self::assertClassExtendsClass(ShouldNotHappenException::class, LogicException::class);
+    }
+
+    /** @throws Throwable */
+    public function testImplementsGhostwriterPHPStanExtensionInterfacePHPStanExtensionExceptionInterface(): void
+    {
+        self::assertClassImplementsInterface(ShouldNotHappenException::class, PHPStanExtensionExceptionInterface::class);
+    }
+
+    /** @throws Throwable */
+    public function testImplementsStringable(): void
+    {
+        self::assertClassImplementsInterface(ShouldNotHappenException::class, Stringable::class);
+    }
+
+    /** @throws Throwable */
+    public function testImplementsThrowable(): void
+    {
+        self::assertClassImplementsInterface(ShouldNotHappenException::class, Throwable::class);
     }
 }

@@ -12,7 +12,6 @@
     executionOrder="depends,random"
     failOnAllIssues="true"
     recordTestRunHistory="false"
-    recordTestRunHistory="false"
     requireCoverageMetadata="true"
     requireSealedMockObjects="true"
     stopOnFailure="true"

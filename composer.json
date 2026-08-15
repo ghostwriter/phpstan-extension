@@ -1,11 +1,11 @@
 {
-    "name": "ghostwriter/wip",
-    "description": "Here be dragons",
+    "name": "ghostwriter/phpstan-extension",
+    "description": "Provides an ALL-IN-ONE extension for PHPStan",
     "license": "BSD-3-Clause",
     "type": "library",
     "keywords": [
         "ghostwriter",
-        "wip"
+        "phpstan-extension"
     ],
     "authors": [
         {
@@ -15,12 +15,12 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/ghostwriter/wip",
+    "homepage": "https://github.com/ghostwriter/phpstan-extension",
     "support": {
-        "issues": "https://github.com/ghostwriter/wip/issues",
-        "source": "https://github.com/ghostwriter/wip",
-        "rss": "https://github.com/ghostwriter/wip/releases.atom",
-        "security": "https://github.com/ghostwriter/wip/security/advisories/new"
+        "issues": "https://github.com/ghostwriter/phpstan-extension/issues",
+        "source": "https://github.com/ghostwriter/phpstan-extension",
+        "rss": "https://github.com/ghostwriter/phpstan-extension/releases.atom",
+        "security": "https://github.com/ghostwriter/phpstan-extension/security/advisories/new"
     },
     "funding": [
         {
@@ -59,7 +59,8 @@
         "ghostwriter/result": "^2.0.0",
         "ghostwriter/root": "^0.1.0",
         "ghostwriter/shell": "^0.1.6",
-        "ghostwriter/uuid": "^1.0.3"
+        "ghostwriter/uuid": "^1.0.3",
+        "phpstan/phpstan": "^2.2.8"
     },
     "require-dev": {
         "ext-xdebug": "*",
@@ -71,7 +72,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Ghostwriter\\Wip\\": "src"
+            "Ghostwriter\\PHPStanExtension\\": "src"
         }
     },
     "autoload-dev": {
@@ -129,13 +130,13 @@
         "ghostwriter": {
             "container": {
                 "provider": [
-                    "Ghostwriter\\Wip\\Container\\WipProvider"
+                    "Ghostwriter\\PHPStanExtension\\Container\\PHPStanExtensionProvider"
                 ]
             }
         },
         "thanks": {
-            "name": "ghostwriter/wip",
-            "url": "https://github.com/ghostwriter/wip"
+            "name": "ghostwriter/phpstan-extension",
+            "url": "https://github.com/ghostwriter/phpstan-extension"
         }
     },
     "scripts": {

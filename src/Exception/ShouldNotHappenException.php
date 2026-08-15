@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Wip\Exception;
+namespace Ghostwriter\PHPStanExtension\Exception;
 
-use Ghostwriter\Wip\Interface\ExceptionInterface;
+use Ghostwriter\PHPStanExtension\Interface\PHPStanExtensionExceptionInterface;
 use LogicException;
 
-final class ShouldNotHappenException extends LogicException implements ExceptionInterface {}
+final class ShouldNotHappenException extends LogicException implements PHPStanExtensionExceptionInterface {}
