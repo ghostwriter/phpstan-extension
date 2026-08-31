@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f4cb2fbb139380ed5fba1a8fa9aba64",
+    "content-hash": "3a5b9c6169fda7a8e5f2227be57df013",
     "packages": [
         {
             "name": "ghostwriter/case-converter",
@@ -1836,11 +1836,11 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "2.2.11",
+            "version": "2.2.12",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/0eb899d48d9b784eee3f1b58a6c9dc79734cf811",
-                "reference": "0eb899d48d9b784eee3f1b58a6c9dc79734cf811",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/174b0d88710f00a42598886504dd7a146f91ace5",
+                "reference": "174b0d88710f00a42598886504dd7a146f91ace5",
                 "shasum": ""
             },
             "require": {
@@ -1896,7 +1896,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-31T10:33:10+00:00"
+            "time": "2026-08-31T19:09:43+00:00"
         },
         {
             "name": "psr/clock",
